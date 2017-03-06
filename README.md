@@ -2,7 +2,7 @@
 
 Hucore is a minimal blog theme for [hugo](http://gohugo.io). The theme is based on [Hemingway2](https://github.com/beli3ver/hemingway2.git).
 
-![](https://github.com/tanksuzuki/hemingway/blob/master/images/tn.png)
+![](https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot.png)
 
 ## Getting Started
 
