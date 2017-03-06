@@ -12,7 +12,7 @@ Hucore is a minimal blog theme for [hugo](http://gohugo.io). The theme is based 
 
 ## Screenshot
 
-![](https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot.png)
+![](https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot_github.png)
 
 See [kloudcore.com](https://kloudcore.com) for an example of this theme in use.
 
