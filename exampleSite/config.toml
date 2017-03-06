@@ -1,0 +1,45 @@
+baseurl = "https://example.com"
+languageCode = "en"
+title = "Hu | Core"
+theme = "Hucore"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+disqusShortname = "shortname"
+googleAnalytics = "trackingcode"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+description = "Your description here"
+keywords = ["keyword 1", "keyword 2", "keyword 3"]
+author = "Morten G. Johansen"
+sharingicons = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/mgjohansen"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://gitlab.com/mgjohansen"
+fa_icon = "fa-gitlab"
+
+[[params.social]]
+url = "https://twitter.com/mgjohansen"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://linkedin.com/in/mgjohansen"
+fa_icon = "fa-linkedin-square"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
+[[params.socialshare]]
+url = "https://linkedin.com/in/mgjohansen"
+fa_icon = "fa-linkedin-square"
