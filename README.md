@@ -2,7 +2,19 @@
 
 Hucore is a minimal blog theme for [hugo](http://gohugo.io). The theme is based on [Hemingway2](https://github.com/beli3ver/hemingway2.git).
 
+## Features
+
+* Responsive & minimal design
+* Disqus support
+* Google Analytics
+* Basic [OpenGraph](http://ogp.me/) metadata support
+* Option for social sharing icons on posts
+
+## Screenshot
+
 ![](https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot.png)
+
+See [kloudcore.com](https://kloudcore.com) for an example of this theme in use.
 
 ## Getting Started
 
