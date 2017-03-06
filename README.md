@@ -91,4 +91,4 @@ Hucore is licensed under the [MIT License](LICENSE.md).
 
 ## Credits
 
-Hucore is based on Hemingway2 created by [Malte Kiefer](https://github.com/beli3ver).
+Hucore is based on [Hemingway2](https://github.com/beli3ver/hemingway2.git) created by [Malte Kiefer](https://github.com/beli3ver).
