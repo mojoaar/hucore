@@ -9,6 +9,7 @@ Hucore is a minimal blog theme for [hugo](http://gohugo.io). The theme is based 
 * Google Analytics
 * Basic [OpenGraph](http://ogp.me/) metadata support
 * Option for social sharing icons on posts
+* Option for author on posts
 
 ## Screenshot
 
