@@ -15,6 +15,7 @@ description = "Your description here"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
 author = "Morten G. Johansen"
 sharingicons = true
+displayauthor = true
 
 [params.highlight]
 style = "github"
