@@ -9,6 +9,15 @@
 <meta property="og:description" content="{{ .Site.Params.Description }}">
 <meta property="og:type" content="website" />
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+<!-- enable inline math equations-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
 <link rel="shortcut icon" href="{{ .Site.BaseURL }}/wave.ico">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
