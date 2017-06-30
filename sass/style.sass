@@ -1,7 +1,15 @@
 $blue: #2077b2
 $primary: $blue
 $grey-dark: #42464c
-$family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
+$montserrat-font: 'Montserrat', sans-serif
+$lora-font: 'Lora', serif
+$fauna-font: 'Fauna One', serif
+$fira-font: 'Fira Mono', monospace
+$merriweather-font: 'Merriweather', serif
+$family-primary: $merriweather-font
+$family-code: $fira-font
+$body-background: #EDEBE6
+$border: rgba(0, 0, 0, 0.1)
 
 @import "node_modules/bulma/sass/utilities/utilities"
 @import "node_modules/bulma/sass/elements/other"
@@ -10,6 +18,24 @@ $family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hira
 @import "node_modules/bulma/sass/components/nav"
 @import "node_modules/bulma/sass/elements/button"
 
+body
+  background: $body-background
+
+p
+  font-size: 16px
+
+.tags .button
+  font-style: italic
+
+h1, h2, h3, h4, h5, h6
+  font-family: $montserrat-font
+  text-transform: uppercase
+
+.site-nav .container
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4)
+
+.nav
+  background: $body-background
 
 .container
   max-width: 800px
@@ -18,6 +44,10 @@ $family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hira
 .content
   font-size: 16px
   line-height: 1.75
+  margin-bottom: 16px
+
+.nav-left
+  margin-left: -8px
 
 .media-content
   .subtitle+.title
@@ -32,7 +62,7 @@ html
   background-color: transparent
 
 .section
-  padding: 40px 20px
+  padding: 40px 20px 0 20px
 
 .nav .level-item
   margin-left: 10px
@@ -44,13 +74,18 @@ nav .level
 .subtitle
   color: #69707a
 
+.site-title,
 .title
   line-height: 1.25
-  font-size: 24px
+  font-size: $size-1
   a
     color: #222324
   &.notfound
     font-size: 20vw
+
+.site-title
+  font-style: italic
+  font-size: $size-2 
 
 code
   color: inherit
@@ -132,3 +167,6 @@ article+article
     pre,
     table
       margin-bottom: 1.5em
+
+.tags
+  margin: 10px 10px 10px -10px
