@@ -1,3 +1,4 @@
+$tan: #EDEBE6
 $blue: #2077b2
 $primary: $blue
 $grey-dark: #42464c
@@ -8,7 +9,7 @@ $fira-font: 'Fira Mono', monospace
 $merriweather-font: 'Merriweather', serif
 $family-primary: $merriweather-font
 $family-code: $fira-font
-$body-background: #EDEBE6
+$body-background: $tan
 $border: rgba(0, 0, 0, 0.1)
 
 @import "node_modules/bulma/sass/utilities/utilities"
@@ -24,7 +25,7 @@ body
   padding-bottom: 20px
 
 p
-  font-size: 16px
+  font-size: 15px
 
 .tags .button
   font-style: italic
@@ -79,6 +80,17 @@ nav .level
 .subtitle
   color: #69707a
 
+.subtitle-no-tags
+  margin-bottom: 20px
+
+.my-social-icons
+  margin-top: 14px
+
+.site-title:hover:after
+  content: " "
+
+
+
 .site-title,
 .title
   line-height: 1.25
@@ -88,14 +100,13 @@ nav .level
   &.notfound
     font-size: 20vw
 
-.site-title
-  font-style: italic
-  font-size: $size-2 
+.title
+  font-size: $size-2
 
 code
   color: inherit
   background-color: transparent
-  font-size: 90%
+  font-size: 14px
 
 
 
@@ -104,44 +115,30 @@ article+article
 
 .content
   h1, h2, h3, h4, h5, h6
-    line-height: 1.25
-    &:not(:first-child)
-      margin-top: 80px
-    &::before
-      color: #aeb1b5
-      font-weight: bold
+    line-height: 1.5
     code
-      background-color: #f8f8f8
+      border: 1px solid darken($tan, 5%)
+      border-radius: 4px
+      background-color: lighten($tan, 5%)
+      padding: 0 7px
   h1+h2:not(:first-child),
   h2+h3:not(:first-child),
   h3+h4:not(:first-child),
   h4+h5:not(:first-child),
   h5+h6:not(:first-child)
-    margin-top: 20px
+    margin-top: 0
   h1
-    font-size: 24px
-    &::before
-      content: "# "
+    font-size: $size-2
   h2
-    font-size: 22px
-    &::before
-      content: "## "
+    font-size: $size-3
   h3
-    font-size: 20px
-    &::before
-      content: "### "
+    font-size: $size-4
   h4
-    font-size: 18px
-    &::before
-      content: "#### "
+    font-size: $size-5
   h5
-    font-size: 17px
-    &::before
-      content: "##### "
+    font-size: $size-6
   h6
-    font-size: 16px
-    &::before
-      content: "###### "
+    font-size: $size-7
   p,
   ol,
   ul,
@@ -156,16 +153,16 @@ article+article
       padding: 8px 10px
       vertical-align: top
   & > code, p > code
-    font-size: 90%
+    font-size: 14px
     padding: 2px 4px
     margin: 0 2px
-    border: 1px solid #ddd
+    border: 1px solid darken($tan, 5%)
     border-radius: 4px
-    background-color: #f8f8f8
+    background-color: lighten($tan, 5%)
     color: #42464c
   pre
     code
-      font-size: 90%
+      font-size: 14px
       padding: 1em
       line-height: 1.5
   li
@@ -185,6 +182,8 @@ article+article
   background: rgba(0, 0, 0, 0.8)
   color: white
   padding: 20px 20px 20px 20px
+
+.more-button
 
 .gone
   display: none
