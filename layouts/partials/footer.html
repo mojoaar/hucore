@@ -1,15 +1,37 @@
 <section class="section">
-  <div class="container has-text-centered">
-    <p>{{ .Site.Copyright | safeHTML }}</p>
-  </div>
+    <div class="container has-text-centered">
+        <p>{{ .Site.Copyright | safeHTML }}</p>
+    </div>
 </section>
 
+<section id="cookie-monster">
+    <p id="cookie-monster-warning">This site uses cookies.</p>
+    <a id="cookie-monster-close"><span id="cookie-monster-close-text">&times;</span></a>
+</section>
+
+<script type="application/javascript">
+    if (localStorage.getItem('cookies')) {
+        document.getElementById('cookie-monster').classList.add('gone');
+    } else {
+        var cookieMonster = document.getElementById('cookie-monster');
+        var closeButton = document.getElementById('cookie-monster-close');
+
+        closeButton.addEventListener('click', function () {
+            cookieMonster.classList.add('gone');
+            localStorage.setItem('cookies', true);
+        })
+    }
+</script>
+
 {{ if .Site.Params.highlight.theme }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/{{ .Site.Params.highlight.theme }}.min.css" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/{{ .Site.Params.highlight.theme }}.min.css"/>
 {{ end }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"
+        integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
 {{ range .Site.Params.highlight.languages }}
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/{{ . }}.min.js"></script>
+<script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/{{ . }}.min.js"></script>
 {{ end }}
 <script>hljs.initHighlightingOnLoad();</script>
 {{ if .Site.GoogleAnalytics }}

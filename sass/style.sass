@@ -19,7 +19,9 @@ $border: rgba(0, 0, 0, 0.1)
 @import "node_modules/bulma/sass/elements/button"
 
 body
+  position: relative
   background: $body-background
+  padding-bottom: 20px
 
 p
   font-size: 16px
@@ -30,6 +32,12 @@ p
 h1, h2, h3, h4, h5, h6
   font-family: $montserrat-font
   text-transform: uppercase
+
+.site-nav
+  padding: 10px 20px 0 20px
+
+.bottom_nav
+  margin-left: -8px
 
 .site-nav .container
   border-bottom: 1px dotted rgba(0, 0, 0, 0.4)
@@ -44,10 +52,7 @@ h1, h2, h3, h4, h5, h6
 .content
   font-size: 16px
   line-height: 1.75
-  margin-bottom: 16px
-
-.nav-left
-  margin-left: -8px
+  margin-bottom: 20px
 
 .media-content
   .subtitle+.title
@@ -170,3 +175,36 @@ article+article
 
 .tags
   margin: 10px 10px 10px -10px
+
+#cookie-monster
+  border-radius: 10px
+  position: fixed
+  bottom: 10px
+  left: 50%
+  transform: translateX(-50%)
+  background: rgba(0, 0, 0, 0.8)
+  color: white
+  padding: 20px 20px 20px 20px
+
+.gone
+  display: none
+
+#cookie-monster-warning
+  font-size: 14px
+  display: block
+  float: left
+
+#cookie-monster-close-text
+  display: block
+  position: relative
+  transform: scale(1.75)
+  top: -1px
+  left: 2px
+
+#cookie-monster-close
+  float: left
+  border-left: 1px solid white
+  color: white !important
+  padding-left: 10px
+  margin-left: 10px
+
