@@ -1,9 +1,50 @@
+$tan: #EDEBE6
 $blue: #2077b2
 $primary: $blue
 $grey-dark: #42464c
-$family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
+$montserrat-font: 'Montserrat', sans-serif
+$lora-font: 'Lora', serif
+$fauna-font: 'Fauna One', serif
+$fira-font: 'Fira Mono', monospace
+$merriweather-font: 'Merriweather', serif
+$family-primary: $merriweather-font
+$family-code: $fira-font
+$body-background: $tan
+$border: rgba(0, 0, 0, 0.1)
 
-@import "node_modules/bulma/bulma"
+@import "node_modules/bulma/sass/utilities/utilities"
+@import "node_modules/bulma/sass/elements/other"
+@import "node_modules/bulma/sass/base/base"
+@import "node_modules/bulma/sass/components/level"
+@import "node_modules/bulma/sass/components/nav"
+@import "node_modules/bulma/sass/elements/button"
+
+body
+  position: relative
+  background: $body-background
+  padding-bottom: 20px
+
+p
+  font-size: 15px
+
+.tags .button
+  font-style: italic
+
+h1, h2, h3, h4, h5, h6
+  font-family: $montserrat-font
+  text-transform: uppercase
+
+.site-nav
+  padding: 10px 20px 0 20px
+
+.bottom_nav
+  margin-left: -8px
+
+.site-nav .container
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4)
+
+.nav
+  background: $body-background
 
 .container
   max-width: 800px
@@ -12,6 +53,7 @@ $family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hira
 .content
   font-size: 16px
   line-height: 1.75
+  margin-bottom: 20px
 
 .media-content
   .subtitle+.title
@@ -26,7 +68,7 @@ html
   background-color: transparent
 
 .section
-  padding: 40px 20px
+  padding: 40px 20px 0 20px
 
 .nav .level-item
   margin-left: 10px
@@ -38,18 +80,33 @@ nav .level
 .subtitle
   color: #69707a
 
+.subtitle-no-tags
+  margin-bottom: 20px
+
+.my-social-icons
+  margin-top: 14px
+
+.site-title:hover:after
+  content: " "
+
+
+
+.site-title,
 .title
   line-height: 1.25
-  font-size: 24px
+  font-size: $size-1
   a
     color: #222324
   &.notfound
     font-size: 20vw
 
+.title
+  font-size: $size-2
+
 code
   color: inherit
   background-color: transparent
-  font-size: 90%
+  font-size: 14px
 
 
 
@@ -58,44 +115,30 @@ article+article
 
 .content
   h1, h2, h3, h4, h5, h6
-    line-height: 1.25
-    &:not(:first-child)
-      margin-top: 80px
-    &::before
-      color: #aeb1b5
-      font-weight: bold
+    line-height: 1.5
     code
-      background-color: #f8f8f8
+      border: 1px solid darken($tan, 5%)
+      border-radius: 4px
+      background-color: lighten($tan, 5%)
+      padding: 0 7px
   h1+h2:not(:first-child),
   h2+h3:not(:first-child),
   h3+h4:not(:first-child),
   h4+h5:not(:first-child),
   h5+h6:not(:first-child)
-    margin-top: 20px
+    margin-top: 0
   h1
-    font-size: 24px
-    &::before
-      content: "# "
+    font-size: $size-2
   h2
-    font-size: 22px
-    &::before
-      content: "## "
+    font-size: $size-3
   h3
-    font-size: 20px
-    &::before
-      content: "### "
+    font-size: $size-4
   h4
-    font-size: 18px
-    &::before
-      content: "#### "
+    font-size: $size-5
   h5
-    font-size: 17px
-    &::before
-      content: "##### "
+    font-size: $size-6
   h6
-    font-size: 16px
-    &::before
-      content: "###### "
+    font-size: $size-7
   p,
   ol,
   ul,
@@ -110,19 +153,57 @@ article+article
       padding: 8px 10px
       vertical-align: top
   & > code, p > code
-    font-size: 90%
+    font-size: 14px
     padding: 2px 4px
     margin: 0 2px
-    border: 1px solid #ddd
+    border: 1px solid darken($tan, 5%)
     border-radius: 4px
-    background-color: #f8f8f8
+    background-color: lighten($tan, 5%)
     color: #42464c
   pre
     code
-      font-size: 90%
+      font-size: 14px
       padding: 1em
       line-height: 1.5
   li
     pre,
     table
       margin-bottom: 1.5em
+
+.tags
+  margin: 10px 10px 10px -10px
+
+#cookie-monster
+  border-radius: 10px
+  position: fixed
+  bottom: 10px
+  left: 50%
+  transform: translateX(-50%)
+  background: rgba(0, 0, 0, 0.8)
+  color: white
+  padding: 20px 20px 20px 20px
+
+.more-button
+
+.gone
+  display: none
+
+#cookie-monster-warning
+  font-size: 14px
+  display: block
+  float: left
+
+#cookie-monster-close-text
+  display: block
+  position: relative
+  transform: scale(1.75)
+  top: -1px
+  left: 2px
+
+#cookie-monster-close
+  float: left
+  border-left: 1px solid white
+  color: white !important
+  padding-left: 10px
+  margin-left: 10px
+

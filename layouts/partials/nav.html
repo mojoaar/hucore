@@ -1,11 +1,13 @@
-<section class="section">
+<div class="site-nav">
   <div class="container">
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+        <a class="nav-item" href="{{ .Site.BaseURL }}">
+          <h1 class="site-title is-4">{{ .Site.Title }}</h1>
+        </a>
       </div>
       <div class="nav-right">
-        <nav class="nav-item level is-mobile">
+        <nav class="nav-item level is-mobile my-social-icons">
           {{ range .Site.Params.social }}
           <a class="level-item" href="{{ .url }}" target="_blank">
             <span class="icon">
@@ -17,4 +19,4 @@
       </div>
     </nav>
   </div>
-</section>
+</div>
