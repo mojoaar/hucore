@@ -10,13 +10,6 @@
             </span>
             Newer
           </a>
-          {{ else }}
-          <a class="button is-disabled">
-            <span class="icon is-small is-marginless">
-              <i class="fa fa-angle-left"></i>
-            </span>
-            Newer
-          </a>
           {{ end }}
         </div>
       </div>
@@ -24,13 +17,6 @@
         <div class="level-item">
           {{ if .Paginator.HasNext }}
           <a class="button" href="{{ .Paginator.Next.URL }}">
-            Older
-            <span class="icon is-small is-marginless">
-              <i class="fa fa-angle-right"></i>
-            </span>
-          </a>
-          {{ else }}
-          <a class="button is-disabled">
             Older
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-right"></i>
