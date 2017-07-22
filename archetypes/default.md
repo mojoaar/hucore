@@ -1,7 +1,6 @@
 +++
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
-categories = ["category"]
-tags = ["tag1", "tag2"]
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+tags = [ ]
 draft = true
 date = {{ .Date }}
 author = ""
