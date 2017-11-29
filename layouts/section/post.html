@@ -1,0 +1,21 @@
+{{ partial "header" . }}
+<body>
+{{ partial "nav" . }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ .Title }}</h1>
+    <h2 class="subtitle is-5">{{ .Date.Format "January 2, 2006" }} {{ if (ne ($.Param "displayauthor") false) }}by {{ .Params.author | default .Site.Params.author }}{{ end }}</h2>
+    {{ if .Params.tags }}
+      {{ partial "tags" .Params.tags }}
+    {{ end }}
+    <div class="content">
+      {{ .Content }}
+    </div>
+    {{ if (ne ($.Param "sharingicons") false) }}
+    {{ partial "sharing.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
+</body>

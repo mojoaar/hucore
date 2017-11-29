@@ -5,7 +5,7 @@
         <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
       <nav class="nav-item level is-mobile">
           {{ range .Site.Params.static_pages }}
-          <a class="level-item" href="{{ .url }}" target="_blank">
+          <a class="level-item" href="{{ .url }}">
             {{ .tag }}
           </a>
           {{ end }}
