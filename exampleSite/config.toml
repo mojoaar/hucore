@@ -1,40 +1,45 @@
-baseurl = "https://example.com"
-languageCode = "en"
-title = "Hu | Core"
-theme = "Hucore"
-copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
-disqusShortname = "shortname"
-googleAnalytics = "trackingcode"
+baseurl = "https://www.ritchievink.com/"
+relativeURLs = true
+title = "Ritchie Vink"
+copyright = "(c) 2017 Ritchie Vink."
+languageCode = "en-EN"
+metaDataFormat = "yaml"
+theme = "hucore"
+paginate = 10
+paginatePath = "page"
+
+disqusShortname = "www-ritchievink-com"
+
+[permalinks]
+    post = "/blog/:year/:month/:day/:slug/"
+    code = "/:slug/"
 
 [taxonomies]
-tag = "tags"
-category = "categories"
+    tag = "tags"
+    topic = "topics"
+
+[author]
+    name = "Ritchie Vink"
+    email = "ritchie46@gmail.com"
 
 [params]
-description = "Your description here"
-keywords = ["keyword 1", "keyword 2", "keyword 3"]
-author = "Morten G. Johansen"
+author = "Ritchie Vink"
+googleAnalytics = "#######"
 sharingicons = true
-displayauthor = true
+keywords = ["keyword 1", "keyword 2", "keyword 3"]
 
 [params.highlight]
 style = "github"
-languages = ["go", "dockerfile"]
+languages = ["scala", "python"]
+
 
 [[params.social]]
-url = "https://github.com/mgjohansen"
+url = "https://github.com/ritchie46"
 fa_icon = "fa-github"
 
-[[params.social]]
-url = "https://gitlab.com/mgjohansen"
-fa_icon = "fa-gitlab"
 
 [[params.social]]
-url = "https://twitter.com/mgjohansen"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "https://linkedin.com/in/mgjohansen"
+url = "https://linkedin.com/in/ritchievink/"
 fa_icon = "fa-linkedin-square"
 
 [[params.social]]
@@ -42,5 +47,18 @@ url = "/index.xml"
 fa_icon = "fa-rss"
 
 [[params.socialshare]]
-url = "https://linkedin.com/in/mgjohansen"
+url = "https://linkedin.com/in/ritchievink"
 fa_icon = "fa-linkedin-square"
+
+[[params.static_pages]]
+url = "/about/"
+tag = "about"
+
+[[params.static_pages]]
+url = "/anastruct/"
+tag = "anastruct"
+
+[[params.static_pages]]
+url = "/mnkappa/"
+tag = "m-n-kappa"
+
