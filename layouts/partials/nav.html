@@ -3,6 +3,13 @@
     <nav class="nav">
       <div class="nav-left">
         <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+      <nav class="nav-item level is-mobile">
+          {{ range .Site.Params.static_pages }}
+          <a class="level-item" href="{{ .url }}">
+            {{ .tag }}
+          </a>
+          {{ end }}
+        </nav>
       </div>
       <div class="nav-right">
         <nav class="nav-item level is-mobile">
