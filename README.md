@@ -1,6 +1,6 @@
 # Hucore
 
-Hucore is a minimal blog theme for [hugo](http://gohugo.io). The theme is based on [Hemingway2](https://github.com/beli3ver/hemingway2.git).
+Hucore is a minimal blog theme for [hugo](https://gohugo.io). The theme is based on [Hemingway2](https://gitlab.com/beli3ver/hemingway2).
 
 ## Features
 
@@ -43,7 +43,7 @@ baseurl = "https://example.com"
 languageCode = "en"
 title = "Hu | Core"
 theme = "Hucore"
-copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"https://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 disqusShortname = "shortname"
 googleAnalytics = "trackingcode"
 
@@ -104,4 +104,4 @@ Hucore is licensed under the [MIT License](LICENSE.md).
 
 ## Credits
 
-Hucore is based on [Hemingway2](https://github.com/beli3ver/hemingway2.git) created by [Malte Kiefer](https://github.com/beli3ver).
+Hucore is based on [Hemingway2](https://gitlab.com/beli3ver/hemingway2) created by [Malte Kiefer](https://github.com/beli3ver).
