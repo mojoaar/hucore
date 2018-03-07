@@ -1,10 +1,20 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 <section class="section">
-  <div class="container">
-    {{ range sort .Paginator.Pages }}
-    <article>
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+  <div class="container posts-wrapper">
+    {{ range sort (.Paginator 11).Pages }}
+    <article class="post">
+      {{if .Params.thumbnail }}
+        <a class="post-link" href="{{ .Permalink }}">
+          <div class="post-image" style="background-image: url({{.Params.thumbnail | absURL}})">
+            <div class="post-content">
+                <h1 class="title">{{ .Title }}{{ if .Draft }} ::Draft{{ end }}
+                <p>{{ .Params.author }}</p>
+            </div>
+          </div>
+        </a>
+      {{end}}
+      <!-- <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <h2 class="subtitle is-5">{{ .Date.Format "January 2, 2006" }}</h2>
       {{ if .Params.tags }}
         {{ partial "tags" .Params.tags }}
@@ -19,7 +29,7 @@
           </span>
         </a>
         {{ end }}
-      </div>
+      </div> -->
     </article>
     {{ end }}
   </div>
