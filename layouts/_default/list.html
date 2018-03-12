@@ -1,25 +1,25 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
 <section class="section">
-  <div class="container">
-    {{ range sort .Paginator.Pages }}
-    <article>
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
-      <h2 class="subtitle is-5">{{ .Date.Format "January 2, 2006" }}</h2>
-      {{ if .Params.tags }}
-        {{ partial "tags" .Params.tags }}
-      {{ end }}
-      <div class="content">
-        {{ .Summary | plainify | safeHTML }}
-        {{ if .Truncated }}
-        ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
+  <div class="container posts-wrapper">
+    {{ range sort (.Paginator 11).Pages }}
+    <article class="post">
+      {{if .Params.thumbnail }}
+        <a class="post-link" href="{{ .Permalink }}">
+          <div class="post-image" style="background-image: url({{.Params.thumbnail | absURL}})">
+            <div class="post-desc">
+              <h1 class="post-desc--title">{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h1>
+              <div class="post-desc--footer">
+                <div class="face" style="background-image: url({{.Params.face | absURL}})"></div>
+                <div>
+                  <h2 class="author">{{ .Params.author }}</h2>
+                  <h3 class="date">{{ .Date.Format "January 2, 2006" }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </a>
-        {{ end }}
-      </div>
+      {{end}}
     </article>
     {{ end }}
   </div>

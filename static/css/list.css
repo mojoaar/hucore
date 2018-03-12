@@ -1,0 +1,109 @@
+.posts-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+
+.posts-wrapper .post{
+  display: inline-block;
+  margin-top: 10px;
+  position: relative;
+}
+
+.post:nth-child(4n){
+  width: 40%;
+}
+
+.post:nth-child(4n-1) {
+  width: 40%;
+}
+
+.post:nth-child(4n-2){
+  width: 57.5%;
+}
+
+.post:nth-child(4n-3) {
+  width: 57.5%;
+}
+
+.posts-wrapper  .post:nth-child(1){
+  width: 100%;
+}
+
+.post-link .post-image{
+  height: 350px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.post-image::after{
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  z-index: 1;
+}
+
+.post-desc{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5%;
+  justify-content: flex-end;
+}
+
+.post-desc .post-desc--title{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.post-desc--footer div{
+  z-index: 2;
+}
+
+.post-desc .post-desc--title,
+.post-desc--footer div .author,
+.post-desc--footer div .date{
+  color: white;
+  z-index: 2;
+}
+
+.post-desc--footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.face{
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-size: cover;
+  background-color: white;
+}
+
+
+@media (max-width: 860px) {
+  .post:nth-child(4n),
+  .post:nth-child(4n-1),
+  .post:nth-child(4n-2),
+  .post:nth-child(4n-3) {
+    width: 100%;
+  }
+}
