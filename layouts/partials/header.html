@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="{{ delimit .Site.Params.Keywords ", " }}" name="keywords">
-<meta content="{{ .Site.Params.Author }}" name="author">
+<meta content="{{ .Params.author | default .Site.Params.author }}" name="author">
 <meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:description" content="{{ .Site.Params.Description }}">
+<meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
 <meta property="og:type" content="website" />
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 <!-- enable inline math equations-->
@@ -20,11 +20,14 @@
   });
 </script>
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
-<link rel="shortcut icon" href="{{ .Site.BaseURL }}/wave.ico">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/nav.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/list.css">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.png">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 {{ with .Site.Params.highlight.style }}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/{{ . }}.min.css">
 {{ else }}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
 {{ end }}
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
