@@ -15,7 +15,7 @@ Hucore is a minimal blog theme for [hugo](https://gohugo.io). The theme is based
 
 ![](https://raw.githubusercontent.com/mgjohansen/hucore/master/images/screenshot_github.png)
 
-See [kloudcore.com](https://kloudcore.com) for an example of this theme in use.
+See [technet.cc](https://technet.cc) for an example of this theme in use.
 
 ## Getting Started
 
@@ -40,10 +40,10 @@ __[config.toml](https://github.com/mgjohansen/hucore/blob/master/exampleSite/con
 
 ```toml
 baseurl = "https://example.com"
-languageCode = "en"
-title = "Hu | Core"
+languageCode = "en-US"
+title = "[Hu]Core"
 theme = "Hucore"
-copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"https://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">[Hu]Core theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 disqusShortname = "shortname"
 googleAnalytics = "trackingcode"
 
@@ -54,8 +54,9 @@ category = "categories"
 [params]
 description = "Your description here"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
-author = "Morten G. Johansen"
+author = "Morten Johansen"
 sharingicons = true
+displayauthor = true
 
 [params.highlight]
 style = "github"
@@ -100,7 +101,7 @@ Hucore is licensed under the [MIT License](LICENSE.md).
 
 ## Author
 
-[Morten G. Johansen](https://github.com/mgjohansen)
+[Morten Johansen](https://github.com/mgjohansen)
 
 ## Credits
 
