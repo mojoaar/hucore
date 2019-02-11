@@ -1,8 +1,8 @@
 baseurl = "https://example.com"
 languageCode = "en-US"
-title = "Hu | Core"
+title = "[Hu]Core"
 theme = "Hucore"
-copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/mgjohansen\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">[Hu]Core theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 disqusShortname = "shortname"
 googleAnalytics = "trackingcode"
 
@@ -13,7 +13,7 @@ category = "categories"
 [params]
 description = "Your description here"
 keywords = ["keyword 1", "keyword 2", "keyword 3"]
-author = "Morten G. Johansen"
+author = "Morten Johansen"
 sharingicons = true
 displayauthor = true
 
