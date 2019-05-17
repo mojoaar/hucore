@@ -1,0 +1,17 @@
+[read_more]
+other = "Read more"
+
+[date]
+other = "{{ .Date.Format \"January 2, 2006\" }}"
+
+[by]
+other = "by"
+
+[share]
+other = "Share on"
+
+[share_email]
+other = "Share via email"
+
+[tweet_this]
+other = "Tweet this"

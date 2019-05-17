@@ -5,7 +5,7 @@
     {{ range sort .Paginator.Pages }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
-      <h2 class="subtitle is-5">{{ .Date.Format "January 2, 2006" }}</h2>
+      <h2 class="subtitle is-5">{{ i18n "date" . }}</h2>
       {{ if .Params.tags }}
         {{ partial "tags" .Params.tags }}
       {{ end }}
@@ -13,7 +13,7 @@
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
-          Read more
+          {{ i18n "read_more" }}
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
           </span>
